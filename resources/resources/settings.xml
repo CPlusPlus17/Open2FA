@@ -2,16 +2,16 @@
     <properties>
         <property id="show_glance" type="boolean">true</property>
 
-        <property id="enabled1" type="boolean" />
-        <property id="name1" type="string" />
-        <property id="code1" type="string" />
+        <property id="enabled1" type="boolean">true</property>
+        <property id="name1" type="string">GitHub (Demo)</property>
+        <property id="code1" type="string">JBSWY3DPEHPK3PXP</property>
         <property id="algo1" type="number">0</property>
         <property id="digits1" type="number">6</property>
         <property id="timeStep1" type="number">30</property>
 
-        <property id="enabled2" type="boolean" />
-        <property id="name2" type="string" />
-        <property id="code2" type="string" />
+        <property id="enabled2" type="boolean">true</property>
+        <property id="name2" type="string">Google (Demo)</property>
+        <property id="code2" type="string">HXDMVJECJJWSRB3HWIZR4IFUGFTMXBOZ</property>
         <property id="algo2" type="number">0</property>
         <property id="digits2" type="number">6</property>
         <property id="timeStep2" type="number">30</property>
