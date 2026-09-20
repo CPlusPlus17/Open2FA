@@ -1,0 +1,25 @@
+# Build artifacts
+bin/
+build/
+*.prg
+*.prg.debug.xml
+*.iq
+mir/
+internal-mir/
+external-mir/
+gen/
+
+# Private keys (CRITICAL - never commit private keys)
+developer_key.der
+developer_key.pem
+*.der
+*.pem
+*.key
+
+# IDE and OS files
+.nodeterm/
+.vscode/project.json
+.DS_Store
+Thumbs.db
+*.swp
+*~

@@ -1,0 +1,70 @@
+name: Build Open2FA
+
+on:
+  push:
+    branches: [ "main", "master" ]
+    tags: [ "v*" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Install Connect IQ SDK Manager CLI
+        run: |
+          mkdir -p ~/.local/bin
+          curl -sL https://github.com/lindell/connect-iq-sdk-manager-cli/releases/download/v0.8.4/connect-iq-sdk-manager-cli_0.8.4_Linux_x86_64.tar.gz | tar -xz -C ~/.local/bin connect-iq-sdk-manager
+          chmod +x ~/.local/bin/connect-iq-sdk-manager
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Accept Garmin SDK Agreement & Download SDK
+        run: |
+          mkdir -p ~/.Garmin/ConnectIQ/Sdks
+          connect-iq-sdk-manager agreement accept
+          connect-iq-sdk-manager sdk download ">=7.0.0"
+          SDK_VERSION=$(connect-iq-sdk-manager sdk list | awk 'NR==2 {print $1}')
+          echo "Using SDK version: $SDK_VERSION"
+          connect-iq-sdk-manager sdk set "$SDK_VERSION"
+          SDK_DIR=$(connect-iq-sdk-manager sdk current-path)
+          echo "$SDK_DIR/bin" >> $GITHUB_PATH
+
+      - name: Setup Developer Key
+        run: |
+          if [ -n "${{ secrets.GARMIN_DEVELOPER_KEY }}" ]; then
+            echo "${{ secrets.GARMIN_DEVELOPER_KEY }}" | base64 -d > developer_key.der
+          else
+            echo "Generating build signing key..."
+            openssl genrsa -out developer_key.pem 4096
+            openssl pkcs8 -topk8 -inform PEM -outform DER -in developer_key.pem -out developer_key.der -nocrypt
+          fi
+
+      - name: Build Open2FA Package (.prg)
+        run: |
+          mkdir -p build
+          monkeyc -f monkey.jungle -o build/Open2FA.prg -y developer_key.der -w
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Open2FA-build
+          path: build/*
+
+      - name: Release Artifacts
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

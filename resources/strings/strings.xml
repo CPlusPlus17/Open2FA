@@ -1,0 +1,70 @@
+<strings>
+    <string id="AppName">Open2FA</string>
+    <string scope="glance" id="GlanceTitle">Open2FA</string>
+
+    <string scope="glance" id="LiveGlance">false</string>
+    <string id="Instinct">false</string>
+
+    <string id="NoCodes">No 2FA accounts
+Add in Connect app</string>
+
+    <string id="digits6">6</string>
+    <string id="digits7">7</string>
+    <string id="digits8">8</string>
+    <string id="digits9">9</string>
+    <string id="digits10">10</string>
+
+    <string id="sha1">SHA-1</string>
+    <string id="sha256">SHA-256</string>
+
+    <string id="show_glance">Show code in glance view</string>
+
+    <string id="enabled1">Account #1 enabled</string>
+    <string id="name1">Account #1 label</string>
+    <string id="code1">Secret key or otpauth:// URI #1</string>
+    <string id="enabled2">Account #2 enabled</string>
+    <string id="name2">Account #2 label</string>
+    <string id="code2">Secret key or otpauth:// URI #2</string>
+    <string id="enabled3">Account #3 enabled</string>
+    <string id="name3">Account #3 label</string>
+    <string id="code3">Secret key or otpauth:// URI #3</string>
+    <string id="enabled4">Account #4 enabled</string>
+    <string id="name4">Account #4 label</string>
+    <string id="code4">Secret key or otpauth:// URI #4</string>
+    <string id="enabled5">Account #5 enabled</string>
+    <string id="name5">Account #5 label</string>
+    <string id="code5">Secret key or otpauth:// URI #5</string>
+    <string id="enabled6">Account #6 enabled</string>
+    <string id="name6">Account #6 label</string>
+    <string id="code6">Secret key or otpauth:// URI #6</string>
+    <string id="enabled7">Account #7 enabled</string>
+    <string id="name7">Account #7 label</string>
+    <string id="code7">Secret key or otpauth:// URI #7</string>
+    <string id="enabled8">Account #8 enabled</string>
+    <string id="name8">Account #8 label</string>
+    <string id="code8">Secret key or otpauth:// URI #8</string>
+    <string id="enabled9">Account #9 enabled</string>
+    <string id="name9">Account #9 label</string>
+    <string id="code9">Secret key or otpauth:// URI #9</string>
+    <string id="enabled10">Account #10 enabled</string>
+    <string id="name10">Account #10 label</string>
+    <string id="code10">Secret key or otpauth:// URI #10</string>
+    <string id="enabled11">Account #11 enabled</string>
+    <string id="name11">Account #11 label</string>
+    <string id="code11">Secret key or otpauth:// URI #11</string>
+    <string id="enabled12">Account #12 enabled</string>
+    <string id="name12">Account #12 label</string>
+    <string id="code12">Secret key or otpauth:// URI #12</string>
+    <string id="enabled13">Account #13 enabled</string>
+    <string id="name13">Account #13 label</string>
+    <string id="code13">Secret key or otpauth:// URI #13</string>
+    <string id="enabled14">Account #14 enabled</string>
+    <string id="name14">Account #14 label</string>
+    <string id="code14">Secret key or otpauth:// URI #14</string>
+    <string id="enabled15">Account #15 enabled</string>
+    <string id="name15">Account #15 label</string>
+    <string id="code15">Secret key or otpauth:// URI #15</string>
+    <string id="digits">Number of digits</string>
+    <string id="timeStep">Code change interval, seconds</string>
+    <string id="algo">Algorithm</string>
+</strings>
