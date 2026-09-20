@@ -43,7 +43,7 @@ Many 2FA/authenticator apps on the Garmin Connect IQ store are marketed as "free
 
 Open2FA supports all Garmin watches running Connect IQ 3.1.0 or higher, including:
 
-* **fēnix series**: fēnix 8 (43mm, 47mm, 51mm AMOLED & Solar), fēnix E, Enduro 3, fēnix 7 / 7S / 7X (Standard, Pro, Solar), fēnix 6 / 6S / 6X Pro, fēnix 5 / 5 Plus.
+* **fēnix series**: **fēnix 9** (43mm, 47mm, 51mm AMOLED & Pro models), fēnix 8 (43mm, 47mm, 51mm AMOLED & Solar), fēnix E, Enduro 3, fēnix 7 / 7S / 7X (Standard, Pro, Solar), fēnix 6 / 6S / 6X Pro, fēnix 5 / 5 Plus.
 * **Epix series**: Epix 2, Epix Pro (42mm, 47mm, 51mm).
 * **Forerunner series**: FR 165, FR 255 / 255S, FR 265 / 265S, FR 955, FR 965, FR 55, FR 245, FR 745, FR 945 / 945LTE.
 * **Venu & Vívoactive series**: Venu 2 / 2S / 2 Plus, Venu 3 / 3S, Venu Sq 2, vívoactive 4 / 4S, vívoactive 5.
